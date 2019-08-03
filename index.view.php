@@ -9,7 +9,6 @@
     <style>
         header {
             padding: 2cm;
-            text-align: center;
             background-color: gray;
             color: white;
 
@@ -19,22 +18,18 @@
 
 <body>
     <header>
-        <h1>
-            <?php
-            foreach ($name as $arrayShow) {
-                echo "<li> $arrayShow</li>";
-            }
-            ?>
-        </h1>
+
+        <?php foreach ($person as $key => $value) : ?>
+
+        <li><strong><?= $key.':' ?></strong> <?= $value ?></li>
+
+        <?php endforeach; ?>
+
 
     </header>
 
-    
-    <?php foreach ($name as $foo) : ?>
 
-        <li><?= $foo ?></li>
 
-    <?php endforeach; ?>
 
 </body>
 
