@@ -16,13 +16,26 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>
-            <?= $greetings; ?>
+            <?php
+            foreach ($name as $arrayShow) {
+                echo "<li> $arrayShow</li>";
+            }
+            ?>
         </h1>
-        
+
     </header>
+
+    
+    <?php foreach ($name as $foo) : ?>
+
+        <li><?= $foo ?></li>
+
+    <?php endforeach; ?>
+
 </body>
 
 </html>
