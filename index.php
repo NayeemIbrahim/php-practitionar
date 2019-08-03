@@ -9,4 +9,10 @@ $person = [
 
 $person['hobby'] = 'Reading';
 
+
+
+die(var_dump($person));
+
+
+
 require "index.view.php";
