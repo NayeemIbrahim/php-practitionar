@@ -33,7 +33,34 @@
         </ul>
 
         <ul>
-            <li><strong>Status: </strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?></li>
+            <li><strong>Status: </strong>
+                <?php
+
+                if ($task['completed'])
+
+                    echo 'Finished';
+
+                else {
+                    echo 'Incomplete';
+                }
+                ?>
+            </li>
+        </ul>
+
+        <ul>
+            <li><strong>Status: </strong>
+
+                <?php if ($task['completed']) :  ?>
+
+                    <span>Finished</span>
+
+                <?php else : ?>
+
+                    <span>incompleted</span>
+
+                <?php endif; ?>
+
+            </li>
         </ul>
 
     </header>
