@@ -1,5 +1,6 @@
 <?php
 
+require 'function.php';
 
 $task = [
     'name' =>        'Nayeem',
@@ -8,5 +9,7 @@ $task = [
     'completed' => true
 ];
 
+
+dd($task);
 
 require "index.view.php";
