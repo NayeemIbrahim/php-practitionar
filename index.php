@@ -2,10 +2,10 @@
 
 
 $task = [
-    'name'=>        'Nayeem',
-    'title'=>        'Homework' ,
-    'due'=>        'Today' ,
-    'completed'=> false
+    'name' =>        'Nayeem',
+    'title' =>        'Homework',
+    'due' =>        'Today',
+    'completed' => false
 ];
 
 

@@ -20,20 +20,23 @@
     <header>
         <h1>Here is Task of Homework </h1>
 
+        <ul>
+            <li><strong>Name: </strong> <?= $task['name'] ?></li>
+        </ul>
 
-        <?php foreach ($task as $key => $value) : ?>
+        <ul>
+            <li><strong>Task: </strong> <?= $task['title'] ?></li>
+        </ul>
 
-            <ul>
-                <li><strong><?= ucwords($key). ':' ;?></strong> <?= $value ?></li>
-            </ul>
+        <ul>
+            <li><strong>Due Date: </strong> <?= $task['due'] ?></li>
+        </ul>
 
-        <?php endforeach; ?>
-
+        <ul>
+            <li><strong>Status: </strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?></li>
+        </ul>
 
     </header>
-
-
-
 
 </body>
 
