@@ -18,10 +18,14 @@
 
 <body>
     <header>
+        <h1>Here is Task of Homework </h1>
 
-        <?php foreach ($person as $key => $value) : ?>
 
-        <li><strong><?= $key.':' ?></strong> <?= $value ?></li>
+        <?php foreach ($task as $key => $value) : ?>
+
+            <ul>
+                <li><strong><?= ucwords($key). ':' ;?></strong> <?= $value ?></li>
+            </ul>
 
         <?php endforeach; ?>
 

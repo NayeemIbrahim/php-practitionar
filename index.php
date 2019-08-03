@@ -1,18 +1,12 @@
 <?php
 
 
-$person = [
+$task = [
     'name'=>        'Nayeem',
-    'age'=>            25 ,
-    'accoupation'=> 'Developer'
+    'title'=>        'Homework' ,
+    'due'=>        'Today' ,
+    'completed'=> false
 ];
-
-$person['hobby'] = 'Reading';
-
-
-
-die(var_dump($person));
-
 
 
 require "index.view.php";
