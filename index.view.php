@@ -18,49 +18,25 @@
 
 <body>
     <header>
-        <h1>Here is Task of Homework </h1>
-
         <ul>
-            <li><strong>Name: </strong> <?= $task['name'] ?></li>
-        </ul>
 
-        <ul>
-            <li><strong>Task: </strong> <?= $task['title'] ?></li>
-        </ul>
+            <?php foreach ($task as $task) : ?>
+                <li>
 
-        <ul>
-            <li><strong>Due Date: </strong> <?= $task['due'] ?></li>
-        </ul>
+                    <?php if ($task->completed) : ?>
 
-        <ul>
-            <li><strong>Status: </strong>
-                <?php
+                        <strike><?= $task->description; ?></strike>
 
-                if ($task['completed'])
+                    <?php else : ?>
 
-                    echo 'Finished';
+                        <?= $task->description; ?>
 
-                else {
-                    echo 'Incomplete';
-                }
-                ?>
-            </li>
-        </ul>
+                    <?php endif; ?>
+                    
+                </li>
 
-        <ul>
-            <li><strong>Status: </strong>
+            <?php endforeach; ?>
 
-                <?php if ($task['completed']) :  ?>
-
-                    <span>Finished</span>
-
-                <?php else : ?>
-
-                    <span>incompleted</span>
-
-                <?php endif; ?>
-
-            </li>
         </ul>
 
     </header>
