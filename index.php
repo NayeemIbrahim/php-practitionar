@@ -1,41 +1,12 @@
 <?php
 
-// require 'function.php';
+require 'function.php';
 
+require 'Task.php';
 
-class Task
-{
+$conn = connectToDB();
 
-    public $description;
-
-    public $completed = false;
-
-    public function __construct($description)
-    {
-       
-        $this->description = $description;
-    
-    }
-
-    public function complete()
-    {
-        $this->completed = true;
-    }
-
-    public function isComplete()
-    {
-
-        return $this->completed;
-    }
-}
-
-$task = [
-    new Task('Go to the store'),
-    new Task('Complete my task'),
-    new Task('Clean the view file'),
-
-];
-$task[0]->complete();
+$task = fetchAllTask($conn);
 
 
 require "index.view.php";
