@@ -1,12 +1,16 @@
 <?php
 
-require 'function.php';
 
 require 'Task.php';
 
-$conn = connectToDB();
+require 'bootstrap.php';
 
-$task = fetchAllTask($conn);
+
+
+
+
+
+$task = $query->selectAll('todos');
 
 
 require "index.view.php";
