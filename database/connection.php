@@ -1,22 +1,21 @@
 <?php
 
-class Connection {
+class Connection
+{
 
-    public static function make()
+    public static function make($config)
     {
 
         try {
-            $conn = new PDO('mysql:host=localhost;dbname=mytodo', 'root', '');
-            // set the PDO error mode to exception
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $conn;
-           // echo "Connected successfully";
+            return new PDO(
+                $config['connection'] . ';dbname=' . $config['name'],
+                $config['username'],
+                $config['password'],
+                $config['options']
+            );
+
         } catch (PDOException $e) {
-            echo "Connection failed: " . $e->getMessage(); 
+            echo "Connection failed: " . $e->getMessage();
         }
     }
 }
-
-
-
-
