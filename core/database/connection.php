@@ -14,7 +14,7 @@ class Connection
                 $config['options']
             );
 
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }

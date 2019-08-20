@@ -17,6 +17,12 @@
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="/about.view.php">About Us page</a></li>
+            <li><a href="/contact.view.php">Contact Us page </a> </li>
+        </ul>
+    </nav>
     <header>
         <ul>
 
