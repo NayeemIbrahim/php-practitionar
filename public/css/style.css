@@ -1,0 +1,18 @@
+header {
+    padding: 2cm;
+    background-color: gray;
+    color: white;
+
+}
+
+body {background-color: lightblue}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+  }

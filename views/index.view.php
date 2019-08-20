@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        header {
-            padding: 2cm;
-            background-color: gray;
-            color: white;
-
-        }
-    </style>
-</head>
+<?php require 'partials/head.php';?>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="/about.view.php">About Us page</a></li>
-            <li><a href="/contact.view.php">Contact Us page </a> </li>
-        </ul>
-    </nav>
+    <?php require 'partials/nav.php';?>
     <header>
         <ul>
 
@@ -48,5 +27,4 @@
     </header>
 
 </body>
-
-</html>
+<?php require 'partials/footer.php';?>
