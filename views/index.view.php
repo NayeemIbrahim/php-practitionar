@@ -1,30 +1,15 @@
 <?php require 'partials/head.php';?>
+<?php require 'partials/nav.php';?>
 
-<body>
-    <?php require 'partials/nav.php';?>
-    <header>
-        <ul>
 
-            <?php foreach ($task as $task) : ?>
-                <li>
+<h1>Input your Name</h1>
+<form action="/names" method="POST">
 
-                    <?php if ($task->completed) : ?>
+<input type="text" name="name" placeholder="Nmae">
 
-                        <strike><?= $task->description; ?></strike>
+<button type="submit">Submit</button>
 
-                    <?php else : ?>
+</form>
 
-                        <?= $task->description; ?>
 
-                    <?php endif; ?>
-                    
-                </li>
-
-            <?php endforeach; ?>
-
-        </ul>
-
-    </header>
-
-</body>
 <?php require 'partials/footer.php';?>
