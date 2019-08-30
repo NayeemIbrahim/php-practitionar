@@ -11,6 +11,7 @@ class Router
 
     ];
 
+
     public static function load($file)
     {
         $router = new static;
@@ -27,7 +28,7 @@ class Router
 
     public function post($uri, $controller)
     {
-        $this->routes['GET'][$uri] = $controller;
+        $this->routes['POST'][$uri] = $controller;
     }
 
 

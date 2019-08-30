@@ -1,7 +1,7 @@
 <?php
 
-
-$config = require 'config.php';
+$app = [];
+$app['config'] = require 'config.php';
 
 require 'core/database/connection.php';
 
@@ -11,9 +11,6 @@ require 'core/Request.php';
 
 require 'core/database/QueryBuilder.php';
 
-
-$conn = Connection::make($config['database']);
-
-$query = new QuerryBuilder($conn);
-
-//return  new QuerryBuilder($conn);
+$app['database'] = new QueryBuilder(
+    Connection::make($app['config']['database'])
+);
