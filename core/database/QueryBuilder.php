@@ -10,6 +10,7 @@ class QueryBuilder
         $this->conn = $conn;
     }
 
+
     public function selectAll($table)
     {
 
@@ -19,6 +20,7 @@ class QueryBuilder
 
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
 
     public function insert($table, $parameters)
     {
@@ -35,6 +37,7 @@ class QueryBuilder
 
             $statement->execute($parameters);
         } catch (Exception $e) {
+
             echo "Something worng";
         }
     }

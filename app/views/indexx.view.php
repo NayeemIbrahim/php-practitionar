@@ -1,7 +1,7 @@
-<?php require 'partials/head.php';?>
+<?php require 'partials/head.php'; ?>
 
 <body>
-    <?php require 'partials/nav.php';?>
+    <?php require 'partials/nav.php'; ?>
     <header>
         <ul>
 
@@ -17,7 +17,7 @@
                         <?= $task->description; ?>
 
                     <?php endif; ?>
-                    
+
                 </li>
 
             <?php endforeach; ?>
@@ -27,4 +27,4 @@
     </header>
 
 </body>
-<?php require 'partials/footer.php';?>
+<?php require 'partials/footer.php'; ?>
